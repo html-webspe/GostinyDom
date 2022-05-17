@@ -1377,6 +1377,7 @@ img {
   background-size: cover;
   width: 80px;
   height: 80px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 1;
 }
@@ -1499,6 +1500,10 @@ img {
 
 .no-webp .touch .s-callback{
   background-image: url(../img/intro/intro-bg.jpg); }
+
+.touch.webp .s-callback {
+  background-image: url(../img/intro/intro-bg.webp);
+}
 
 .s-callback {
   background-position: center;
