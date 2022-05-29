@@ -8905,12 +8905,31 @@
             }));
         };
         if (buttonFixed) positionFixed("button-fixed", 600);
-        const videoSlide = document.querySelector(".video-slide");
-        const videoSliteBtn = document.querySelector(".video-slide__btn");
+        const videoSlide = document.querySelector(".video-slide"), videoSliteBtn = document.querySelector(".video-slide__btn");
         if (videoSlide) videoSliteBtn.addEventListener("click", (function(e) {
             if (this.closest(".video-slide").classList.contains("video-targowekhome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/GiyCQbFLMpU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-wlochyhome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/nhIJf6SthR0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-nowewlochyhome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/MHH9HtfoBSA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-sadybahome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/0hUaVnil2P8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-promienisty")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/RlE3YEOKUbM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-wilanowhome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/sraPM34r1tM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'); else if (this.closest(".video-slide").classList.contains("video-pruszkowhome")) videoSlide.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/1WjlSTIANto?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         }));
-        window["FLS"] = true;
+        document.addEventListener("selectCallback", (function(e) {
+            const currentSelect = e.detail.select, priceDayPl = document.querySelector(".price-day-pl"), priceWeekPl = document.querySelector(".price-week-pl"), priceMonthPl = document.querySelector(".price-month-pl"), priceDayUsd = document.querySelector(".price-day-usd"), priceWeeUsd = document.querySelector(".price-week-usd"), priceMonthUsd = document.querySelector(".price-month-usd");
+            if (2 == currentSelect.value) {
+                priceDayPl.innerHTML = "20 zł";
+                priceWeekPl.innerHTML = "240 zł";
+                priceMonthPl.innerHTML = "680 zł";
+                priceDayUsd.innerHTML = "10 $";
+                priceWeeUsd.innerHTML = "55 $";
+                priceMonthUsd.innerHTML = "620 $";
+            } else if (3 == currentSelect.value) {
+                priceDayPl.innerHTML = "30 zł";
+                priceWeekPl.innerHTML = "340 zł";
+                priceMonthPl.innerHTML = "980 zł";
+                priceDayUsd.innerHTML = "30 $";
+                priceWeeUsd.innerHTML = "35 $";
+                priceMonthUsd.innerHTML = "920 $";
+                0;
+            }
+            document.addEventListener("click", (function(e) {}));
+        }));
+        window["FLS"] = false;
         isWebp();
         addTouchClass();
         addLoadedClass();
