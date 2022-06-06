@@ -8912,22 +8912,48 @@
         document.addEventListener("selectCallback", (function(e) {
             const currentSelect = e.detail.select, priceDayPl = document.querySelector(".price-day-pl"), priceWeekPl = document.querySelector(".price-week-pl"), priceMonthPl = document.querySelector(".price-month-pl"), priceDayUsd = document.querySelector(".price-day-usd"), priceWeeUsd = document.querySelector(".price-week-usd"), priceMonthUsd = document.querySelector(".price-month-usd");
             if (2 == currentSelect.value) {
-                priceDayPl.innerHTML = "20 zł";
-                priceWeekPl.innerHTML = "240 zł";
-                priceMonthPl.innerHTML = "680 zł";
-                priceDayUsd.innerHTML = "10 $";
-                priceWeeUsd.innerHTML = "55 $";
-                priceMonthUsd.innerHTML = "620 $";
+                priceDayPl.innerHTML = "65 zł";
+                priceWeekPl.innerHTML = "300 zł";
+                priceMonthPl.innerHTML = "810 zł";
+                priceDayUsd.innerHTML = "14 $";
+                priceWeeUsd.innerHTML = "67 $";
+                priceMonthUsd.innerHTML = "180 $";
             } else if (3 == currentSelect.value) {
-                priceDayPl.innerHTML = "30 zł";
-                priceWeekPl.innerHTML = "340 zł";
-                priceMonthPl.innerHTML = "980 zł";
-                priceDayUsd.innerHTML = "30 $";
-                priceWeeUsd.innerHTML = "35 $";
-                priceMonthUsd.innerHTML = "920 $";
-                0;
+                priceDayPl.innerHTML = "50 zł";
+                priceWeekPl.innerHTML = "280 zł";
+                priceMonthPl.innerHTML = "750 zł";
+                priceDayUsd.innerHTML = "11 $";
+                priceWeeUsd.innerHTML = "62 $";
+                priceMonthUsd.innerHTML = "167 $";
+            } else if (4 == currentSelect.value) {
+                priceDayPl.innerHTML = "50 zł";
+                priceWeekPl.innerHTML = "250 zł";
+                priceMonthPl.innerHTML = "720 zł";
+                priceDayUsd.innerHTML = "11 $";
+                priceWeeUsd.innerHTML = "56 $";
+                priceMonthUsd.innerHTML = "160 $";
+            } else if (5 == currentSelect.value) {
+                priceDayPl.innerHTML = "50 zł";
+                priceWeekPl.innerHTML = "230 zł";
+                priceMonthPl.innerHTML = "700 zł";
+                priceDayUsd.innerHTML = "11 $";
+                priceWeeUsd.innerHTML = "51 $";
+                priceMonthUsd.innerHTML = "156 $";
+            } else if (6 == currentSelect.value) {
+                priceDayPl.innerHTML = "45 zł";
+                priceWeekPl.innerHTML = "220 zł";
+                priceMonthPl.innerHTML = "670 zł";
+                priceDayUsd.innerHTML = "10 $";
+                priceWeeUsd.innerHTML = "49 $";
+                priceMonthUsd.innerHTML = "149 $";
+            } else if (8 == currentSelect.value) {
+                priceDayPl.innerHTML = "45 zł";
+                priceWeekPl.innerHTML = "200 zł";
+                priceMonthPl.innerHTML = "650 zł";
+                priceDayUsd.innerHTML = "10 $";
+                priceWeeUsd.innerHTML = "44 $";
+                priceMonthUsd.innerHTML = "144 $";
             }
-            document.addEventListener("click", (function(e) {}));
         }));
         window["FLS"] = false;
         isWebp();
