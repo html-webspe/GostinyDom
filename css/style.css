@@ -1359,9 +1359,89 @@ img {
 }
 
 .main-hostel {
-  padding-top: 70px;
+  padding-top: 150px;
   padding-bottom: 80px;
   background-color: #000;
+}
+
+.hostel-rules {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #000000;
+}
+
+.hostel-rules__container {
+  max-width: 59.875rem;
+}
+
+.hostel-rules__body {
+  padding: 70px 16px;
+  text-align: center;
+  border: 1px solid #d7b667;
+}
+
+.hostel-rules__title {
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #d7b667;
+  text-transform: uppercase;
+  margin-bottom: 3.125rem;
+}
+
+.hostel-rules__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #545044;
+  padding: 24px 15px;
+  max-width: 618px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #d7b667;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.hostel-rules__item:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.hostel-rules__item:last-child {
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(215, 182, 103, 0.3);
+          box-shadow: 0px 0px 30px 5px rgba(215, 182, 103, 0.3);
+}
+
+.hostel-rules__item:hover {
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(215, 182, 103, 0.3);
+          box-shadow: 0px 0px 30px 5px rgba(215, 182, 103, 0.3);
+}
+
+.hostel-rules__item i {
+  margin-right: 15px;
+}
+
+.hostel-rules__item-hand {
+  width: 4.625rem;
+  position: absolute;
+  right: 15px;
+  bottom: -50px;
+  -webkit-animation: spin 3.4s infinite linear;
+          animation: spin 3.4s infinite linear;
+}
+
+.fg1 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .video-slide {
@@ -1522,12 +1602,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .houses__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 285px;
           flex: 0 0 285px;
@@ -1540,7 +1627,8 @@ img {
 
 .houses__item-img {
   position: relative;
-  padding-bottom: 62.5%;
+  padding-bottom: 83.5%;
+  width: 100%;
   margin-bottom: 25px;
   border-radius: 10px 10px 0 0;
 }
@@ -1570,6 +1658,17 @@ img {
 }
 
 .houses__item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
   color: #fff;
 }
 
@@ -1583,11 +1682,19 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  gap: 10px;
   margin-bottom: 0.8125rem;
 }
 
 .houses__item-row:last-child {
   margin-bottom: 1.1875rem;
+}
+
+.houses__item-price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .houses__item-title {
@@ -1654,6 +1761,17 @@ img {
 .houses__item-dop {
   font-size: 12px;
   color: #9F9F9F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
 }
 
 .houses__item-button {
@@ -1949,6 +2067,8 @@ img {
   line-height: 1.55;
   border-radius: 20px;
   background-color: #f5d585;
+  background: -o-linear-gradient(306.36deg, #B57628 0.77%, #F4E089 54.19%, #A16427 127.12%, rgba(196, 196, 196, 0) 127.13%);
+  background: linear-gradient(143.64deg, #B57628 0.77%, #F4E089 54.19%, #A16427 127.12%, rgba(196, 196, 196, 0) 127.13%);
   font-weight: 600;
 }
 
@@ -2963,6 +3083,17 @@ img {
     border-radius: 10px;
   }
 
+  .hostel-rules__item i {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 42px;
+            flex: 0 0 42px;
+    height: 42px;
+  }
+
+  .hostel-rules__item img {
+    height: 100%;
+  }
+
   .faq__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3213,7 +3344,6 @@ img {
 
   .header-secondary {
     background-color: #030303;
-    position: relative;
   }
 
   .menu__body {
@@ -3796,6 +3926,30 @@ img {
     display: inline-flex;
   }
 
+  .hostel-rules {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  .hostel-rules__body {
+    padding-top: 40px;
+  }
+
+  .hostel-rules__title {
+    font-size: 1.375rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hostel-rules__item {
+    padding: 15px;
+    font-size: 0.75rem;
+  }
+
+  .hostel-rules__item-hand {
+    width: 32px;
+    bottom: -26px;
+  }
+
   .video-slide span {
     font-size: 0.75rem;
     top: 65%;
@@ -3917,6 +4071,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .houses__item:not(:last-child) {

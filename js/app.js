@@ -8911,7 +8911,7 @@
         }));
         document.addEventListener("selectCallback", (function(e) {
             const currentSelect = e.detail.select, priceDayPl = document.querySelector(".price-day-pl"), priceWeekPl = document.querySelector(".price-week-pl"), priceMonthPl = document.querySelector(".price-month-pl"), priceDayUsd = document.querySelector(".price-day-usd"), priceWeeUsd = document.querySelector(".price-week-usd"), priceMonthUsd = document.querySelector(".price-month-usd");
-            if (2 == currentSelect.value) {
+            if (2 == currentSelect.value || 2.1 == currentSelect.value) {
                 priceDayPl.innerHTML = "65 zł";
                 priceWeekPl.innerHTML = "300 zł";
                 priceMonthPl.innerHTML = "810 zł";
@@ -8939,20 +8939,34 @@
                 priceDayUsd.innerHTML = "11 $";
                 priceWeeUsd.innerHTML = "51 $";
                 priceMonthUsd.innerHTML = "156 $";
-            } else if (6 == currentSelect.value) {
+            } else if (6 == currentSelect.value || 6.1 == currentSelect.value) {
                 priceDayPl.innerHTML = "45 zł";
                 priceWeekPl.innerHTML = "220 zł";
                 priceMonthPl.innerHTML = "670 zł";
                 priceDayUsd.innerHTML = "10 $";
                 priceWeeUsd.innerHTML = "49 $";
                 priceMonthUsd.innerHTML = "149 $";
-            } else if (8 == currentSelect.value) {
+            } else if (8 == currentSelect.value || 8.1 == currentSelect.value || 8.2 == currentSelect.value) {
                 priceDayPl.innerHTML = "45 zł";
                 priceWeekPl.innerHTML = "200 zł";
                 priceMonthPl.innerHTML = "650 zł";
                 priceDayUsd.innerHTML = "10 $";
                 priceWeeUsd.innerHTML = "44 $";
                 priceMonthUsd.innerHTML = "144 $";
+            } else if (8.8 == currentSelect.value) {
+                priceDayPl.innerHTML = "45 zł";
+                priceWeekPl.innerHTML = "220 zł";
+                priceMonthPl.innerHTML = "650 zł";
+                priceDayUsd.innerHTML = "10 $";
+                priceWeeUsd.innerHTML = "49 $";
+                priceMonthUsd.innerHTML = "144 $";
+            } else if (5.8 == currentSelect.value) {
+                priceDayPl.innerHTML = "50 zł";
+                priceWeekPl.innerHTML = "220 zł";
+                priceMonthPl.innerHTML = "670 zł";
+                priceDayUsd.innerHTML = "11 $";
+                priceWeeUsd.innerHTML = "49 $";
+                priceMonthUsd.innerHTML = "149 $";
             }
         }));
         window["FLS"] = false;
