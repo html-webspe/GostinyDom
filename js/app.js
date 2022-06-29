@@ -4273,6 +4273,7 @@
         function formQuantity() {
             document.addEventListener("click", (function(e) {
                 let targetElement = e.target;
+                console.log(targetElement);
                 if (targetElement.closest("[data-quantity-plus]") || targetElement.closest("[data-quantity-minus]")) {
                     const valueElement = targetElement.closest("[data-quantity]").querySelector("[data-quantity-value]");
                     let value = parseInt(valueElement.value);

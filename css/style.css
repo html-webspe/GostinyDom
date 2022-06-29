@@ -640,7 +640,7 @@ textarea.input {
 }
 
 .quantity {
-  width: 60px;
+  width: 80px;
   height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,7 +692,6 @@ textarea.input {
   text-align: center;
   background: transparent;
   outline: transparent;
-  pointer-events: none;
 }
 
 .qs-datepicker-container {

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220629182528">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220629192129">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -360,7 +360,7 @@
 							<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="callback-hostel__form form form-hostel">
 
 								<h2 class="form-hostel__title">Оставить заявку</h2>
-								<input type="text" hidden name="formHostel">
+								<input type="hidden" name="formHostel">
 
 								<label class="form__row">
 									<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="name" placeholder="Ваше имя" class="form__input input">
@@ -379,13 +379,20 @@
 
 								<label class="form__row">
 									Количество детей
+
+
 									<div data-quantity class="quantity">
 										<button data-quantity-plus type="button" class="quantity__button quantity__button-plus"></button>
+
 										<div class="quantity__input">
 											<input data-quantity-value data-quantity-max="4" type="text" name="quantity" value="1">
 										</div>
+
 										<button data-quantity-minus type="button" class="quantity__button quantity__button-minus"></button>
 									</div>
+
+
+
 								</label>
 
 								<label class="form__row">
@@ -1027,7 +1034,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220629182528"></script>
+	<script src="js/app.min.js?_v=20220629192129"></script>
 </body>
 
 </html>
