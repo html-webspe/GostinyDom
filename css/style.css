@@ -691,6 +691,8 @@ textarea.input {
   width: 100%;
   text-align: center;
   background: transparent;
+  outline: transparent;
+  pointer-events: none;
 }
 
 .qs-datepicker-container {
@@ -1189,6 +1191,7 @@ body::after {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  outline: transparent;
 }
 
 .callback-popup__content {
@@ -1249,7 +1252,7 @@ body::after {
 }
 
 .rules-popup__content {
-  max-width: 580px;
+  max-width: 780px;
   border-width: 1px;
   background-color: #000000;
   border-color: #d7b667;
@@ -1801,7 +1804,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 }
 
 .advantages__item-icon {
@@ -1822,6 +1825,10 @@ img {
 .advantages__item-text {
   font-size: 12px;
   line-height: 1.45;
+  text-align: center;
+}
+
+.advantages__item-desc {
   text-align: center;
 }
 
@@ -2191,7 +2198,7 @@ img {
 
 .s-vacancies {
   background-color: #000000;
-  padding-top: 4.6875rem;
+  padding-top: 7.1875rem;
   padding-bottom: 0;
 }
 
@@ -2390,6 +2397,26 @@ img {
 
 .header__logo img {
   max-width: 100%;
+}
+
+.sub-menu__list {
+  display: none;
+  padding: 20px;
+}
+
+.sub-menu__item:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.sub-menu__link {
+  color: #fff;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.sub-menu__link:hover {
+  color: #d7b667;
 }
 
 .menu-open .menu__body {
@@ -2602,7 +2629,7 @@ img {
 
 .hostel__slider-big-slide {
   position: relative;
-  padding-bottom: 62%;
+  text-align: center;
 }
 
 .hostel__slider-big-slide::after {
@@ -2617,7 +2644,12 @@ img {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
-.hostel__slider-big-slide img,
+.hostel__slider-big-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 .hostel__slider-big-slide iframe {
   position: absolute;
   width: 100%;
@@ -2626,9 +2658,6 @@ img {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.hostel__slider-big-slide iframe {
   z-index: 10;
 }
 
@@ -2693,6 +2722,16 @@ img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.video-slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .price-hostel {
@@ -3094,6 +3133,10 @@ img {
     height: 100%;
   }
 
+  .advantages__item-desc {
+    min-height: 105px;
+  }
+
   .faq__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3234,12 +3277,6 @@ img {
 
   .intro__info-icon {
     height: 5.25rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-bottom: 11px;
   }
 
@@ -3263,6 +3300,10 @@ img {
 
   .advantages__item-text {
     font-size: 1rem;
+  }
+
+  .advantages__item-desc {
+    min-height: 138px;
   }
 
   .s-callback {
@@ -3362,12 +3403,20 @@ img {
     row-gap: 10px;
   }
 
+  .menu__item {
+    position: relative;
+  }
+
   .menu__item:first-child {
     display: none;
   }
 
   .menu__item:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .menu__item:hover .sub-menu__list {
+    display: block;
   }
 
   .menu__link {
@@ -3389,6 +3438,15 @@ img {
 
   .menu__link-brend {
     display: none;
+  }
+
+  .sub-menu__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 195px;
+    background-color: #030303;
   }
 
   .footer {
@@ -3524,6 +3582,12 @@ img {
   .intro__info-icon {
     width: 5.25rem;
     margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .houses__body {
@@ -3765,6 +3829,10 @@ img {
     margin-bottom: 2.5rem;
   }
 
+  .menu__item.active .sub-menu__list {
+    display: block;
+  }
+
   .menu__link {
     font-size: 18px;
     font-weight: 600;
@@ -3775,6 +3843,11 @@ img {
     background: -webkit-linear-gradient(95.44deg, #B57628 -2.94%, #F4E089 33.45%, #A16427 107.96%, rgba(196, 196, 196, 0) 107.97%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .sub-menu__list {
+    padding-left: 5px;
+    padding-bottom: 0;
   }
 
   .icon-menu {
@@ -4160,6 +4233,65 @@ img {
     padding-bottom: 140px;
   }
 
+  .houses__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 61.99875em) and (max-width: 76.875em) {
+  .intro__body {
+    text-align: center;
+  }
+
+  .intro__title {
+    font-size: 47px;
+  }
+
+  .intro__text-sm br {
+    display: none;
+  }
+
+  .intro__text-posab {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  .intro__button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .intro__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .infrastructure-hostel {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .infrastructure-hostel__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 37.5em) and (max-width: 61.99875em) {
+  .intro__title {
+    font-size: 40px;
+    max-width: 50%;
+  }
+
   .intro__text-posab {
     position: absolute;
     bottom: 70px;
@@ -4171,17 +4303,6 @@ img {
     bottom: 0;
     left: 0;
     margin: 0;
-  }
-
-  .houses__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-@media (min-width: 37.5em) and (max-width: 61.99875em) {
-  .intro__title {
-    font-size: 40px;
-    max-width: 50%;
   }
 
   .intro__info-item {
@@ -4216,25 +4337,6 @@ img {
     margin-right: auto;
     padding: 20px;
     margin-bottom: 1.875rem;
-  }
-}
-
-@media (min-width: 61.99875em) and (max-width: 76.875em) {
-  .intro__title {
-    font-size: 47px;
-  }
-
-  .intro__text-sm br {
-    display: none;
-  }
-
-  .infrastructure-hostel {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .infrastructure-hostel__item:not(:last-child) {
-    margin-right: 50px;
   }
 }
 
