@@ -2643,14 +2643,8 @@ img {
 }
 
 .hostel__slider-big-slide iframe {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 10;
 }
 
 .hostel__slider-small {
@@ -3993,6 +3987,10 @@ img {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+  }
+
+  .main-hostel {
+    padding-top: 100px;
   }
 
   .hostel-rules {
