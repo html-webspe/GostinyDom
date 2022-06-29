@@ -652,9 +652,9 @@ textarea.input {
       -ms-flex: 0 0 18px;
           flex: 0 0 18px;
   position: relative;
-  cursor: pointer;
   border: 1px solid #555454;
   border-radius: 2px;
+  pointer-events: all;
 }
 
 .quantity__button::before,
@@ -682,19 +682,6 @@ textarea.input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  position: relative;
-}
-
-.quantity__input::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  pointer-events: none;
-  z-index: 1;
 }
 
 .quantity__input input {
@@ -707,6 +694,7 @@ textarea.input {
   height: 100%;
   position: relative;
   z-index: 0;
+  pointer-events: none;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -1468,6 +1456,10 @@ img {
   bottom: -50px;
   -webkit-animation: spin 3.4s infinite linear;
           animation: spin 3.4s infinite linear;
+}
+
+.no--events {
+  pointer-events: none;
 }
 
 .fg1 {
