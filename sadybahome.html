@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220629231645">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220701133717">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -312,13 +312,18 @@
 									</svg>
 								</i>
 								<select class="price-hostel__select-select">
-									<option value="8" selected>Десятиместный (эконом)</option>
-									<option value="8.2">Десятиместный (одноярусный)</option>
-									<option value="8.1">Восьмиместный (мужской)</option>
-									<option value="8">Восьмиместный (женский)</option>
-									<option value="6">Шестиместный</option>
-									<option value="2">Двухместный</option>
+									<option value="10" selected>10-ти местная</option>
+									<option value="8">8-ми местная</option>
+									<option value="8ж">8-ми местная (женская)</option>
+									<option value="6">6-ти местная</option>
+									<option value="4">4-х местная</option>
+									<option value="2.2">2-х местная
+										(двуспальный диваном)</option>
+									<option value="2.1">2-х местная
+										(односпальные кровати)</option>
+									<option value="1">одноместная</option>
 								</select>
+
 							</div>
 							<!-- Hostel-body-->
 							<div class="price-hostel__body">
@@ -436,23 +441,27 @@
 					<div class="hostel__callback callback-hostel">
 
 						<div class="callback-hostel__body">
-							<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="callback-hostel__form form form-hostel">
+
+							<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="form callback-hostel__form form-hostel">
 
 								<h2 class="form-hostel__title">Оставить заявку</h2>
-								<input type="text" hidden name="formHostel">
+								<!--<input type="hidden" name="sadybahome[]">-->
 
 								<label class="form__row">
-									<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="name" placeholder="Ваше имя" class="form__input input">
+									<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="sadybahome[name]" placeholder="Ваше имя" class="form__input input">
 								</label>
 
 								<label class="form__row">
-									<select class="form-hostel__select">
-										<option value="8" selected>Десятиместный (эконом)</option>
-										<option value="8.2">Десятиместный (одноярусный)</option>
-										<option value="8.1">Восьмиместный (мужской)</option>
-										<option value="8">Восьмиместный (женский)</option>
-										<option value="6">Шестиместный</option>
-										<option value="2">Двухместный</option>
+									<select class="form-hostel__select" name="sadybahome[typeroom]">
+										<option value="10-ти местная" selected>10-ти местная</option>
+										<option value="8-ми местная">8-ми местная</option>
+										<option value="6-ти местная">6-ти местная</option>
+										<option value="4-х местная">4-х местная</option>
+										<option value="2-х местная (двуспальный диван)">2-х местная
+											(двуспальный диваном)</option>
+										<option value="2-х местная (односпальные кровати)">2-х местная
+											(односпальные кровати)</option>
+										<option value="одноместная">одноместная</option>
 									</select>
 								</label>
 
@@ -461,7 +470,7 @@
 									<div data-quantity class="quantity">
 										<button data-quantity-minus type="button" class="quantity__button quantity__button-minus"></button>
 										<div class="quantity__input">
-											<input data-quantity-value data-quantity-max="4" type="number" name="quantity" value="1">
+											<input data-quantity-value data-quantity-max="4" type="number" name="sadybahome[quantity]" value="0">
 										</div>
 										<button data-quantity-plus type="button" class="quantity__button quantity__button-plus"></button>
 
@@ -469,7 +478,7 @@
 								</label>
 
 								<label class="form__row">
-									<input data-datepicker type="text" placeholder="Дата заезда" name="datepicker" class="form__input input">
+									<input data-datepicker type="text" placeholder="Дата заезда" class="form__input input" name="sadybahome[datepicker]">
 								</label>
 
 								<div class="form__checkbox checkbox">
@@ -512,8 +521,8 @@
 					<a href="mailto:gostiny.dom.warszawa@gmail.com" class="footer__navigation-item">gostiny.dom.warszawa@gmail.com</a>
 					<a href="/policy" target="_blank" class="footer__navigation-item">Политика Конфиденциальности</a>
 					<a href="/reglament" target="_blank" class="footer__navigation-item">Регламент</a>
-					<a href="/job" class="footer__navigation-item">Вакансии</a>
-					<a href="/partners" class="footer__navigation-item">Сотрудничество</a>
+					<a href="job.html" class="footer__navigation-item">Вакансии</a>
+					<a href="partners.html" class="footer__navigation-item">Сотрудничество</a>
 				</nav>
 
 
@@ -1106,7 +1115,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220629231645"></script>
+	<script src="js/app.min.js?_v=20220701133717"></script>
 </body>
 
 </html>
