@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220701133717">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220701162002">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -454,7 +454,7 @@
 							<div class="price-hostel__btns">
 								<a href="" data-goto=".callback-hostel" data-goto-top="330" class="btn price-hostel__btn">Оставить
 									заявку</a>
-								<a href="tel:+380505005500" class="btn btn-secondary price-hostel__btn">Позвонить</a>
+								<a href="tel:+48732080877" class="btn btn-secondary price-hostel__btn">Позвонить</a>
 							</div>
 						</div>
 						<!-- Hostel-Info-->
@@ -548,20 +548,26 @@
 							<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="callback-hostel__form form form-hostel">
 
 								<h2 class="form-hostel__title">Оставить заявку</h2>
-								<input type="text" hidden name="formHostel">
+								<input type="hidden" name="targowekhome[subject]" value="Targowek Home">
 
 								<label class="form__row">
 									<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="name" placeholder="Ваше имя" class="form__input input">
 								</label>
 
 								<label class="form__row">
-									<select class="form-hostel__select">
-										<option value="8" selected>Десятиместный</option>
-										<option value="6">Шестиместный (женский)</option>
-										<option value="6.1">Шестиместный</option>
-										<option value="4">Четырехместный</option>
-										<option value="3">Трехместный</option>
-										<option value="2">Двухместный</option>
+									<select class="form-hostel__select" name="targowekhome[typeroom]">
+										<option value="10-ти местная" selected>10-ти местная</option>
+										<option value="6-ти местная">6-ти местная</option>
+										<option value="4-х местная">4-х местная</option>
+										<option value="3-х местная">3-х местная</option>
+										<option value="2-х местная (двуспальная кровать)">2-х местная (двуспальная
+											кровать)</option>
+										<option value="2-х местная (односпальные кровати)">2-х местная (односпальные
+											кровати)</option>
+										<option value="одноместная (эконом, без окна)">одноместная (эконом, без окна)
+										</option>
+										<option value="одноместная (двуспальный диван)">одноместная (двуспальный диван)
+										</option>
 									</select>
 								</label>
 
@@ -570,7 +576,7 @@
 									<div data-quantity class="quantity">
 										<button data-quantity-minus type="button" class="quantity__button quantity__button-minus"></button>
 										<div class="quantity__input">
-											<input data-quantity-value data-quantity-max="4" type="number" name="quantity" value="0">
+											<input data-quantity-value data-quantity-max="4" type="number" name="targowekhome[quantity]" value="0">
 										</div>
 										<button data-quantity-plus type="button" class="quantity__button quantity__button-plus"></button>
 
@@ -578,7 +584,7 @@
 								</label>
 
 								<label class="form__row">
-									<input data-datepicker type="text" placeholder="Дата заезда" name="datepicker" class="form__input input">
+									<input data-datepicker type="text" placeholder="Дата заезда" name="targowekhome[datepicker]" class="form__input input">
 								</label>
 
 								<div class="form__checkbox checkbox">
@@ -709,12 +715,13 @@
 				</div>
 
 				<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="form form-callback">
-					<input type="text" hidden name="formCallback">
+					<input type="hidden" name="сallback[subject]" value="Заявка на звонок">
+
 					<label class="form__row">
-						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="name" placeholder="Имя" class="form__input input">
+						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="сallback[name]" placeholder="Имя" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input input">
+						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="сallback[phone]" placeholder="+48 732 080 877" class="form__input input">
 					</label>
 					<label class="form__row">
 						<div class="form__checkbox checkbox">
@@ -750,18 +757,20 @@
 				<h3 class="callback-popup__title">Оставьте заявку</h3>
 
 				<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="form form-callback">
-					<input type="text" hidden name="formPartners">
+
+					<input type="hidden" name="partners[subject]" value="Заявка от Партнеров">
+
 					<label class="form__row">
-						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="name" placeholder="Имя" class="form__input input">
+						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="partners[name]" placeholder="Имя" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="firstName" placeholder="Название фирмы" class="form__input input">
+						<input autocomplete="off" type="text" data-error="Обязательное поле" data-required name="partners[firm]" placeholder="Название фирмы" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input input">
+						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="partners[phone]" placeholder="+48 732 080 877" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="email" data-error="Обязательное поле" data-required name="email" placeholder="Ваш Email" class="form__input input">
+						<input autocomplete="off" type="email" data-error="Обязательное поле" data-required name="partners[email]" placeholder="Ваш Email" class="form__input input">
 					</label>
 					<label class="form__row">
 						<div class="form__checkbox checkbox">
@@ -838,13 +847,14 @@
 				</div>
 
 				<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="form form-vacancies">
-					<input type="text" hidden name="vacanciesAdmin">
+					<input type="hidden" name="vacancies[subject]" value="Вакансия на Администратора">
+
 
 					<label class="form__row">
-						<input autocomplete="off" type="text" name="name" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input  input">
+						<input autocomplete="off" type="text" name="vacancies[name]" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input  input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input  input">
+						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="vacancies[phone]" placeholder="+48 732 080 877" class="form__input  input">
 					</label>
 					<button type="submit" class="form__button button">Отправить заявку</button>
 				</form>
@@ -914,12 +924,14 @@
 
 
 				<form data-ajax method="POST" action="sendmail.php" class="form vacancies-popup__form form-vacancies">
-					<input type="text" hidden name="vacanciesAdminSmena">
+
+					<input type="hidden" name="vacancies[subject]" value="Вакансия на Подменный администратор">
+
 					<label class="form__row">
-						<input autocomplete="off" type="text" name="name" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input input">
+						<input autocomplete="off" type="text" name="vacancies[name]" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input input">
+						<input autocomplete="off" type="vacancies[phone]" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input input">
 					</label>
 					<button type="submit" class="form__button button">Отправить заявку</button>
 				</form>
@@ -1118,12 +1130,14 @@
 					<p>Либо можете оставить заявку и мы вам перезвоним.</p>
 				</div>
 				<form data-ajax method="POST" action="files/sendmail/sendmail.php" class="form form-vacancies">
-					<input type="text" hidden name="vacanciesMaster">
+
+					<input type="hidden" name="vacancies[subject]" value="Вакансия на Сотрудник хозяйственной части">
+
 					<label class="form__row">
-						<input autocomplete="off" type="text" name="name" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input input">
+						<input autocomplete="off" type="text" name="vacancies[name]" data-error="Обязательное поле" data-required placeholder="Ваше имя" class="form__input input">
 					</label>
 					<label class="form__row">
-						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="tel" placeholder="+48 732 080 877" class="form__input input">
+						<input autocomplete="off" type="tel" data-error="Обязательное поле" data-required name="vacancies[phone]" placeholder="+48 732 080 877" class="form__input input">
 					</label>
 					<button type="submit" class="form__button button">Отправить заявку</button>
 				</form>
@@ -1215,7 +1229,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220701133717"></script>
+	<script src="js/app.min.js?_v=20220701162002"></script>
 </body>
 
 </html>
