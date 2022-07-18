@@ -8910,6 +8910,13 @@
             e.preventDefault();
             this.closest(".menu__item").classList.toggle("active");
         }));
+        const housesItem = document.querySelectorAll(".houses__item");
+        if (housesItem) housesItem.forEach((el => {
+            el.addEventListener("click", (function(e) {
+                let link = el.querySelector(".houses__item-button").href;
+                window.location.assign(link);
+            }));
+        }));
         const videoSlide = document.querySelector(".video-slide"), videoSliteBtn = document.querySelector(".video-slide__btn");
         if (videoSlide) videoSliteBtn.addEventListener("click", (function(e) {
             this.closest(".video-slide").querySelector("img").style.display = "none";

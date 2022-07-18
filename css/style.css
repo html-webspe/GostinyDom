@@ -1569,6 +1569,24 @@ img {
   font-size: 18px;
   line-height: 1.55;
   padding: 4px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.4)));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  width: 45px;
+  height: 100%;
+  -webkit-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  -webkit-animation: 1s linear 5s infinite move_eye;
+          animation: 1s linear 5s infinite move_eye;
 }
 
 .intro__info {
@@ -1644,6 +1662,7 @@ img {
   border: 0.5px solid #616060;
   border-radius: 10px;
   padding: 18px 20px 24px 20px;
+  cursor: pointer;
 }
 
 .houses__item-img {
@@ -1690,6 +1709,7 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 100%;
+  width: 100%;
   color: #fff;
 }
 
@@ -2070,8 +2090,10 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
+}
+
+.intro-partners__container {
+  z-index: 1;
 }
 
 .intro-partners__title {
@@ -2648,18 +2670,15 @@ img {
 .hostel__slider-big-slide {
   position: relative;
   text-align: center;
-}
+  /*&::after{
+      content:'';
+      position: absolute;width: 100%;height: 127px;bottom: 0;left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 
-.hostel__slider-big-slide::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 127px;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      @media (min-width:$pc){
+           height: rem(302); 
+      }
+  }*/
 }
 
 .hostel__slider-big-slide iframe {
@@ -3670,10 +3689,6 @@ img {
     width: 780px;
     margin-right: 20px;
     margin-bottom: 0;
-  }
-
-  .hostel__slider-big-slide::after {
-    height: 18.875rem;
   }
 
   .price-hostel {
